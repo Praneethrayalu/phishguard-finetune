@@ -1,0 +1,29 @@
+{
+  "model": "TF-IDF (word 1-2 grams) + logistic regression",
+  "train_n": 9136,
+  "test": {
+    "n": 2625,
+    "threshold": 0.5,
+    "accuracy": 0.9801904761904762,
+    "precision": 0.9630369630369631,
+    "recall": 0.9846782431052093,
+    "f1": 0.9737373737373738,
+    "roc_auc": 0.9986589584184025,
+    "average_precision": 0.9977611439230738,
+    "confusion_matrix_true_rows_safe_phishing": [
+      [
+        1609,
+        37
+      ],
+      [
+        15,
+        964
+      ]
+    ]
+  },
+  "inference": {
+    "total_seconds": 0.5646138339999993,
+    "mean_ms_per_email_batched": 0.21509098438095212
+  },
+  "note": "Threshold fixed at 0.5; test set not used for tuning."
+}

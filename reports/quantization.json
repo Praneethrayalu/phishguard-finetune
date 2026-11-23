@@ -1,0 +1,27 @@
+{
+  "backend": "PyTorch dynamic int8 Linear (CPU)",
+  "validation": {
+    "n": 128,
+    "threshold": 0.5,
+    "accuracy": 0.9140625,
+    "precision": 0.8372093023255814,
+    "recall": 0.9,
+    "f1": 0.8674698795180723,
+    "roc_auc": 0.9886363636363636,
+    "average_precision": 0.9781143073485973,
+    "confusion_matrix_true_rows_safe_phishing": [
+      [
+        81,
+        7
+      ],
+      [
+        4,
+        36
+      ]
+    ]
+  },
+  "max_probability_delta_from_fp32": 0.5959339737892151,
+  "artifact_bytes": 138717643,
+  "inference_seconds": 2.4500383509999892,
+  "security": "Load only locally generated trusted artifacts; torch pickle can execute code."
+}

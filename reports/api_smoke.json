@@ -1,0 +1,13 @@
+{
+  "health": {
+    "ready": true,
+    "model": "tfidf-logreg"
+  },
+  "prediction": {
+    "label": "safe",
+    "phishing_probability": 0.21609186082953194,
+    "model": "tfidf-logreg",
+    "warning": "Experimental signal, not a safety guarantee. Never open a link just because this says safe."
+  },
+  "openapi_ok": true
+}

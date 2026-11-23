@@ -1,0 +1,10 @@
+{
+  "python": "3.10.12",
+  "torch": "2.14.1+cpu",
+  "transformers": "5.20.2",
+  "peft": "0.21.3",
+  "scikit-learn": "1.7.2",
+  "pandas": "2.3.3",
+  "tests": "7 passed, including real local LoRA + quantized inference integration",
+  "docker": "not available; not run"
+}

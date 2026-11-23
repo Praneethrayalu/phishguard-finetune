@@ -1,0 +1,97 @@
+{
+  "protocol": "same fixed 2625-row holdout, threshold 0.5; see MODEL_CARD.md",
+  "baseline": {
+    "model": "TF-IDF (word 1-2 grams) + logistic regression",
+    "train_n": 9136,
+    "test": {
+      "n": 2625,
+      "threshold": 0.5,
+      "accuracy": 0.9801904761904762,
+      "precision": 0.9630369630369631,
+      "recall": 0.9846782431052093,
+      "f1": 0.9737373737373738,
+      "roc_auc": 0.9986589584184025,
+      "average_precision": 0.9977611439230738,
+      "confusion_matrix_true_rows_safe_phishing": [
+        [
+          1609,
+          37
+        ],
+        [
+          15,
+          964
+        ]
+      ]
+    },
+    "inference": {
+      "total_seconds": 0.5646138339999993,
+      "mean_ms_per_email_batched": 0.21509098438095212
+    },
+    "note": "Threshold fixed at 0.5; test set not used for tuning."
+  },
+  "distilbert_lora_fp32": {
+    "test_rows": 2625,
+    "seed": 42,
+    "threshold": 0.5,
+    "hardware": "Linux-6.1.189+-x86_64-with-glibc2.35",
+    "torch_threads": 2,
+    "lora_train_rows": 1024,
+    "models": {
+      "distilbert_lora_fp32": {
+        "n": 2625,
+        "threshold": 0.5,
+        "accuracy": 0.9306666666666666,
+        "precision": 0.8770104068117314,
+        "recall": 0.9468845760980592,
+        "f1": 0.9106090373280943,
+        "roc_auc": 0.9793351759985206,
+        "average_precision": 0.9662542681507476,
+        "confusion_matrix_true_rows_safe_phishing": [
+          [
+            1516,
+            130
+          ],
+          [
+            52,
+            927
+          ]
+        ],
+        "total_seconds": 96.03308610299996,
+        "mean_ms_per_email_batched": 36.58403280114285
+      }
+    }
+  },
+  "distilbert_lora_int8": {
+    "test_rows": 2625,
+    "seed": 42,
+    "threshold": 0.5,
+    "hardware": "Linux-6.1.189+-x86_64-with-glibc2.35",
+    "torch_threads": 2,
+    "lora_train_rows": 1024,
+    "models": {
+      "distilbert_lora_int8": {
+        "n": 2625,
+        "threshold": 0.5,
+        "accuracy": 0.9219047619047619,
+        "precision": 0.8714011516314779,
+        "recall": 0.9274770173646578,
+        "f1": 0.8985650667986146,
+        "roc_auc": 0.9751606333241077,
+        "average_precision": 0.960353401726982,
+        "confusion_matrix_true_rows_safe_phishing": [
+          [
+            1512,
+            134
+          ],
+          [
+            71,
+            908
+          ]
+        ],
+        "total_seconds": 47.88332662799996,
+        "mean_ms_per_email_batched": 18.24126728685713,
+        "artifact_bytes": 138717643
+      }
+    }
+  }
+}

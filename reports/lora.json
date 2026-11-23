@@ -1,0 +1,34 @@
+{
+  "base_model": "distilbert/distilbert-base-uncased",
+  "train_rows": 1024,
+  "epochs": 1,
+  "steps": 128,
+  "max_length": 128,
+  "batch_size": 8,
+  "training_seconds": 98.92864476300002,
+  "trainable_parameters": 739586,
+  "total_parameters": 67694596,
+  "last_loss": 0.02228911593556404,
+  "validation": {
+    "n": 128,
+    "threshold": 0.5,
+    "accuracy": 0.9296875,
+    "precision": 0.8444444444444444,
+    "recall": 0.95,
+    "f1": 0.8941176470588236,
+    "roc_auc": 0.9903409090909091,
+    "average_precision": 0.9822022423086254,
+    "confusion_matrix_true_rows_safe_phishing": [
+      [
+        81,
+        7
+      ],
+      [
+        2,
+        38
+      ]
+    ]
+  },
+  "test_evaluated": false,
+  "warning": "Limited CPU run is not evidence of production quality. Baseline and LoRA results on different sets are not comparable."
+}
